@@ -3,7 +3,8 @@
 #
 # Usage:
 #   scripts/new-post.sh --title "My Post" [--slug my-post] [--date 2026-10-12] \
-#     [--tags "security,ai"] [--description "..."] [--body-file FILE] \
+#     [--tags "fair,scoring"] [--categories "Risk Assessment"] [--level 2] \
+#     [--weight 10] [--description "..."] [--body-file FILE] \
 #     [--draft] [--no-commit] [--no-push] [-m "commit message"]
 #
 # If --body-file is omitted the body is read from stdin.
@@ -17,6 +18,9 @@ TITLE=""
 SLUG=""
 DATE="$(date +%Y-%m-%d)"
 TAGS=""
+CATEGORIES=""
+LEVEL=""
+WEIGHT=""
 DESC=""
 BODY_FILE=""
 DRAFT=0
@@ -35,6 +39,9 @@ while [ $# -gt 0 ]; do
     --slug) SLUG="${2:-}"; shift 2 ;;
     --date) DATE="${2:-}"; shift 2 ;;
     --tags) TAGS="${2:-}"; shift 2 ;;
+    --categories|--cats) CATEGORIES="${2:-}"; shift 2 ;;
+    --level) LEVEL="${2:-}"; shift 2 ;;
+    --weight) WEIGHT="${2:-}"; shift 2 ;;
     --description|--desc) DESC="${2:-}"; shift 2 ;;
     --body-file) BODY_FILE="${2:-}"; shift 2 ;;
     --draft) DRAFT=1; shift ;;
@@ -95,6 +102,19 @@ mkdir -p "$CONTENT_DIR"
   else
     printf 'tags: []\n'
   fi
+  if [ -n "$CATEGORIES" ]; then
+    printf 'categories:\n'
+    old_ifs="$IFS"; IFS=','
+    for c in $CATEGORIES; do
+      c="$(printf '%s' "$c" | sed -E 's/^[[:space:]]+//; s/[[:space:]]+$//')"
+      [ -n "$c" ] && printf '  - "%s"\n' "$(escape_dq "$c")"
+    done
+    IFS="$old_ifs"
+  else
+    printf 'categories: []\n'
+  fi
+  [ -n "$LEVEL" ] && printf 'level: %s\n' "$LEVEL"
+  [ -n "$WEIGHT" ] && printf 'weight: %s\n' "$WEIGHT"
   [ "$DRAFT" = 1 ] && printf 'draft: true\n'
   printf -- '---\n\n'
   printf '%s\n' "$BODY"
