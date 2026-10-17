@@ -36,10 +36,7 @@ levels:
       - "Run a qualitative risk assessment with a scoring matrix."
       - "Know when and how to go quantitative (FAIR, Monte Carlo)."
       - "Choose between avoid, mitigate, transfer and accept."
-    planned:
-      - title: "Designing a Risk Scoring Matrix That Isn't Arbitrary"
-      - title: "FAIR in 15 Minutes: Quantitative Risk for Busy People"
-      - title: "Control Types: Preventive, Detective, Corrective, Deterrent"
+    planned: []
 
   - id: 3
     name: "Specialist"

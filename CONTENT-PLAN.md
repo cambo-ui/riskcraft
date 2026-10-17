@@ -9,10 +9,10 @@ posts filled in around them. "Published" = live now; everything else is planned.
 | --- | --- | --- | --- |
 | 0 | Ground Zero | Speak the language of risk | 4 of 4 written ✅ |
 | 1 | Foundations | Run the core risk loop | 4 of 4 written ✅ |
-| 2 | Practitioner | Assess, analyse, treat | 1 of 4 written |
-| 3 | Specialist | Frameworks & compliance | 1 of 4 written |
-| 4 | Enterprise | Governance & GRC at scale | 1 of 4 written |
-| 5 | Hero | Culture, metrics, leadership | 1 of 4 written |
+| 2 | Practitioner | Assess, analyse, treat | 5 of 5 written ✅ |
+| 3 | Specialist | Frameworks & compliance | 1 of 5 written |
+| 4 | Enterprise | Governance & GRC at scale | 1 of 5 written |
+| 5 | Hero | Culture, metrics, leadership | 1 of 5 written |
 
 ## Post roadmap
 
@@ -36,10 +36,10 @@ posts filled in around them. "Published" = live now; everything else is planned.
 | Post | Topic | Status |
 | --- | --- | --- |
 | Qualitative vs. quantitative risk analysis | Risk Assessment | ✅ published |
-| Designing a risk scoring matrix that isn't arbitrary | Risk Assessment | planned |
-| FAIR in 15 minutes: quantitative risk for busy people | Risk Assessment | planned |
-| Control types: preventive, detective, corrective, deterrent | Treatment & Controls | planned |
-| Avoid, mitigate, transfer, accept: choosing a treatment | Treatment & Controls | planned |
+| Designing a risk scoring matrix that isn't arbitrary | Risk Assessment | ✅ published |
+| FAIR in 15 minutes: quantitative risk for busy people | Risk Assessment | ✅ published |
+| Control types: preventive, detective, corrective, deterrent | Treatment & Controls | ✅ published |
+| Avoid, mitigate, transfer, accept: choosing a treatment | Treatment & Controls | ✅ published |
 
 ### Level 3 — Specialist · *frameworks & compliance*
 | Post | Topic | Status |
