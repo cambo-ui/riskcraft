@@ -16,10 +16,7 @@ levels:
       - "Define risk, threat, vulnerability, likelihood and impact in plain English."
       - "Explain why IT risk is a business conversation, not a checklist."
       - "Read a risk register and understand what each column means."
-    planned:
-      - title: "Risk vs. Threat vs. Vulnerability vs. Impact"
-      - title: "Inherent vs. Residual Risk, Explained Simply"
-      - title: "The CIA Triad and Why It Anchors Everything"
+    planned: []
 
   - id: 1
     name: "Foundations"
@@ -29,10 +26,7 @@ levels:
       - "Describe the risk management lifecycle end to end."
       - "Build a risk register people actually use."
       - "Set an appetite and tolerance statement that means something."
-    planned:
-      - title: "The Risk Management Lifecycle, Step by Step"
-      - title: "Risk Appetite vs. Risk Tolerance vs. Risk Capacity"
-      - title: "How to Write a Risk Statement That Isn't Vague"
+    planned: []
 
   - id: 2
     name: "Practitioner"

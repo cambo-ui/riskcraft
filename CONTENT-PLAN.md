@@ -7,8 +7,8 @@ posts filled in around them. "Published" = live now; everything else is planned.
 
 | Level | Name | Goal | Status |
 | --- | --- | --- | --- |
-| 0 | Ground Zero | Speak the language of risk | 1 of 4 written |
-| 1 | Foundations | Run the core risk loop | 1 of 4 written |
+| 0 | Ground Zero | Speak the language of risk | 4 of 4 written ✅ |
+| 1 | Foundations | Run the core risk loop | 4 of 4 written ✅ |
 | 2 | Practitioner | Assess, analyse, treat | 1 of 4 written |
 | 3 | Specialist | Frameworks & compliance | 1 of 4 written |
 | 4 | Enterprise | Governance & GRC at scale | 1 of 4 written |
@@ -20,17 +20,17 @@ posts filled in around them. "Published" = live now; everything else is planned.
 | Post | Topic | Status |
 | --- | --- | --- |
 | What is IT risk? A plain-English primer | Foundations | ✅ published |
-| Risk vs. threat vs. vulnerability vs. impact | Foundations | planned |
-| Inherent vs. residual risk, explained simply | Foundations | planned |
-| The CIA triad and why it anchors everything | Foundations | planned |
+| Risk vs. threat vs. vulnerability vs. impact | Foundations | ✅ published |
+| Inherent vs. residual risk, explained simply | Foundations | ✅ published |
+| The CIA triad and why it anchors everything | Foundations | ✅ published |
 
 ### Level 1 — Foundations · *the risk loop*
 | Post | Topic | Status |
 | --- | --- | --- |
 | Building a risk register people actually use | Foundations | ✅ published |
-| The risk management lifecycle, step by step | Foundations | planned |
-| Risk appetite vs. tolerance vs. capacity | Governance & Oversight | planned |
-| How to write a risk statement that isn't vague | Foundations | planned |
+| The risk management lifecycle, step by step | Foundations | ✅ published |
+| Risk appetite vs. tolerance vs. capacity | Governance & Oversight | ✅ published |
+| How to write a risk statement that isn't vague | Foundations | ✅ published |
 
 ### Level 2 — Practitioner · *assess, analyse, treat*
 | Post | Topic | Status |
