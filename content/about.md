@@ -3,11 +3,11 @@ title: "About"
 description: "About RiskCraft — a practical blog on IT risk management, governance, and making risk work in real organisations. Follow on Facebook, join the Telegram group."
 ---
 
-**RiskCraft** is a personal blog about **IT risk management** — written for anyone who has to make, explain, or defend decisions about technology risk inside a real organisation.
+**RiskCraft** is a blog about **IT risk management** — written by the **RiskCraft Team** for anyone who has to make, explain, or defend decisions about technology risk inside a real organisation.
 
-I work in IT risk and governance, and I started this blog for one reason: the gap between how risk is *described* in textbooks and how it actually gets *done* inside an organisation is enormous.
+We work in IT risk and governance, and we started this blog for one reason: the gap between how risk is *described* in textbooks and how it actually gets *done* inside an organisation is enormous.
 
-Most teams do not fail at risk because they lack a framework. They fail because the framework is not connected to a decision anyone cares about. RiskCraft is my attempt to close that gap — practically, honestly, and without vendor spin.
+Most teams do not fail at risk because they lack a framework. They fail because the framework is not connected to a decision anyone cares about. RiskCraft is our attempt to close that gap — practically, honestly, and without vendor spin.
 
 ## What you'll find here
 
