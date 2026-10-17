@@ -42,6 +42,11 @@
       <div class="footer-col">
         <h3>{{ site.Title }}</h3>
         <p>{{ site.Params.tagline }}</p>
+        <ul class="footer-contact">
+          {{ with site.Params.facebook }}<li><a href="{{ . }}" rel="me">Facebook</a></li>{{ end }}
+          {{ with site.Params.telegram }}<li><a href="{{ . }}">Telegram group</a></li>{{ end }}
+          {{ with site.Params.email }}<li><a href="mailto:{{ . }}">{{ . }}</a></li>{{ end }}
+        </ul>
       </div>
       <div class="footer-col">
         <h3>The path</h3>

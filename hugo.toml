@@ -12,9 +12,9 @@ enableGitInfo = false
   description = 'From risk fundamentals to enterprise GRC.'
   tagline = 'From risk fundamentals to enterprise GRC.'
   author = 'RiskCraft'
-  # Update these once you have a domain / email
-  email = ''
-  github = ''
+  email = 'riskcraft69@gmail.com'
+  facebook = 'https://www.facebook.com/RiskCraftKH'
+  telegram = 'https://t.me/+pLuaBXpQ55tkZjQ9'
 
 # Two axes for organising the blog:
 #   categories -> the topic domain (what it is about)

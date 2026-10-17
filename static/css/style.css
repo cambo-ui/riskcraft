@@ -121,6 +121,7 @@ article { border: none; padding: 2rem 0; }
 .footer-col h3 { font-size: .8rem; text-transform: uppercase; letter-spacing: .05em; margin: 0 0 .6rem; }
 .footer-col p { margin: 0; }
 .footer-col ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .35rem; }
+.footer-contact { margin-top: .6rem; }
 .site-footer .footer-copy { text-align: center; margin: 1.5rem auto 0; }
 .site-footer a { color: var(--muted); }
 .site-footer a:hover { color: var(--link); }
