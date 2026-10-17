@@ -12,7 +12,7 @@ posts filled in around them. "Published" = live now; everything else is planned.
 | 2 | Practitioner | Assess, analyse, treat | 5 of 5 written ✅ |
 | 3 | Specialist | Frameworks & compliance | 5 of 5 written ✅ |
 | 4 | Enterprise | Governance & GRC at scale | 5 of 5 written ✅ |
-| 5 | Hero | Culture, metrics, leadership | 1 of 5 written |
+| 5 | Hero | Culture, metrics, leadership | 5 of 5 written ✅ |
 
 ## Post roadmap
 
@@ -63,10 +63,10 @@ posts filled in around them. "Published" = live now; everything else is planned.
 | Post | Topic | Status |
 | --- | --- | --- |
 | Building a risk culture that actually holds | Culture & Career | ✅ published |
-| Designing KRIs that predict, not just report | Metrics & Reporting | planned |
-| Five conversations that shift risk culture | Culture & Career | planned |
-| CRISC, CISM or CISSP? A risk career roadmap | Culture & Career | planned |
-| Writing a one-page board risk report | Governance & Oversight | planned |
+| Designing KRIs that predict, not just report | Metrics & Reporting | ✅ published |
+| Five conversations that shift risk culture | Culture & Career | ✅ published |
+| CRISC, CISM or CISSP? A risk career roadmap | Culture & Career | ✅ published |
+| Writing a one-page board risk report | Governance & Oversight | ✅ published |
 
 ## Topic backlog (by domain)
 

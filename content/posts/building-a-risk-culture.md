@@ -75,4 +75,4 @@ Blame-free does not mean accountability-free. The goal is a **learning culture**
 
 ---
 
-*You have reached Level 5. From here the path is about breadth — supply chain, cloud, metrics, and leadership — so keep an eye on the [learning path](/learning-path/).*
+*You have reached Level 5. From here the path is about turning culture into something measurable and reportable — keep going with [KRIs that predict, not just report](/posts/kris-that-predict/).*
