@@ -56,10 +56,7 @@ levels:
       - "Apply the Three Lines Model to an IT risk function."
       - "Report risk to a board or steering committee in one page."
       - "Integrate risk into change, project and vendor processes."
-    planned:
-      - title: "Risk Appetite Statements the Board Will Actually Approve"
-      - title: "Third-Party and Supply-Chain Risk: A Practical Playbook"
-      - title: "Cloud Shared Responsibility and What It Means for Your Risk"
+    planned: []
 
   - id: 5
     name: "Hero"

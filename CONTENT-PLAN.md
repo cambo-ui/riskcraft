@@ -11,7 +11,7 @@ posts filled in around them. "Published" = live now; everything else is planned.
 | 1 | Foundations | Run the core risk loop | 4 of 4 written ✅ |
 | 2 | Practitioner | Assess, analyse, treat | 5 of 5 written ✅ |
 | 3 | Specialist | Frameworks & compliance | 5 of 5 written ✅ |
-| 4 | Enterprise | Governance & GRC at scale | 1 of 5 written |
+| 4 | Enterprise | Governance & GRC at scale | 5 of 5 written ✅ |
 | 5 | Hero | Culture, metrics, leadership | 1 of 5 written |
 
 ## Post roadmap
@@ -54,10 +54,10 @@ posts filled in around them. "Published" = live now; everything else is planned.
 | Post | Topic | Status |
 | --- | --- | --- |
 | The Three Lines Model, explained for IT risk | Governance & Oversight | ✅ published |
-| Risk appetite statements the board will actually approve | Governance & Oversight | planned |
-| Third-party and supply-chain risk: a practical playbook | Third-Party Risk | planned |
-| Cloud shared responsibility and what it means for your risk | Cloud & Cyber Risk | planned |
-| Putting risk into change, project, and vendor processes | Governance & Oversight | planned |
+| Risk appetite statements the board will actually approve | Governance & Oversight | ✅ published |
+| Third-party and supply-chain risk: a practical playbook | Third-Party Risk | ✅ published |
+| Cloud shared responsibility and what it means for your risk | Cloud & Cyber Risk | ✅ published |
+| Putting risk into change, project, and vendor processes | Governance & Oversight | ✅ published |
 
 ### Level 5 — Hero · *culture, metrics, leadership*
 | Post | Topic | Status |
