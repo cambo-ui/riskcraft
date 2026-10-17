@@ -10,7 +10,7 @@ posts filled in around them. "Published" = live now; everything else is planned.
 | 0 | Ground Zero | Speak the language of risk | 4 of 4 written ✅ |
 | 1 | Foundations | Run the core risk loop | 4 of 4 written ✅ |
 | 2 | Practitioner | Assess, analyse, treat | 5 of 5 written ✅ |
-| 3 | Specialist | Frameworks & compliance | 1 of 5 written |
+| 3 | Specialist | Frameworks & compliance | 5 of 5 written ✅ |
 | 4 | Enterprise | Governance & GRC at scale | 1 of 5 written |
 | 5 | Hero | Culture, metrics, leadership | 1 of 5 written |
 
@@ -45,10 +45,10 @@ posts filled in around them. "Published" = live now; everything else is planned.
 | Post | Topic | Status |
 | --- | --- | --- |
 | IT risk frameworks explained (ISO 27005, NIST, COBIT, COSO, FAIR) | Frameworks & Standards | ✅ published |
-| ISO 27005 in practice: a worked example | Frameworks & Standards | planned |
-| NIST RMF vs. ISO 27005: which one, and when | Frameworks & Standards | planned |
-| Audit readiness: evidence you can reuse | Compliance & Audit | planned |
-| Mapping controls across frameworks (one control, many standards) | Compliance & Audit | planned |
+| ISO 27005 in practice: a worked example | Frameworks & Standards | ✅ published |
+| NIST RMF vs. ISO 27005: which one, and when | Frameworks & Standards | ✅ published |
+| Audit readiness: evidence you can reuse | Compliance & Audit | ✅ published |
+| Mapping controls across frameworks (one control, many standards) | Compliance & Audit | ✅ published |
 
 ### Level 4 — Enterprise · *governance & GRC at scale*
 | Post | Topic | Status |

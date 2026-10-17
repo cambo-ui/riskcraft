@@ -46,10 +46,7 @@ levels:
       - "Compare ISO 31000, ISO 27005, NIST RMF, COBIT, COSO and FAIR."
       - "Align controls to a framework without drowning in paperwork."
       - "Prepare for an audit without a last-minute fire drill."
-    planned:
-      - title: "ISO 27005 in Practice: A Worked Example"
-      - title: "NIST RMF vs. ISO 27005: Which One and When"
-      - title: "Audit Readiness: Evidence You Can Reuse"
+    planned: []
 
   - id: 4
     name: "Enterprise"
