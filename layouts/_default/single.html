@@ -1,0 +1,24 @@
+{{ define "title" }}{{ .Title }} — {{ site.Title }}{{ end }}
+{{ define "main" }}
+<article>
+  <div class="back-home-row">{{ partial "back-home.html" . }}</div>
+  <h1>{{ .Title }}</h1>
+  <div class="post-meta">
+    {{ partial "level-badge.html" . }}
+    {{ with site.Params.author }}<span class="post-author">By {{ . }}</span>{{ end }}
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+    {{ with .GetTerms "categories" }}<span>· in {{ range $i, $t := . }}{{ if $i }}, {{ end }}<a href="{{ $t.RelPermalink }}">{{ $t.Title }}</a>{{ end }}</span>{{ end }}
+  </div>
+  <div class="prose">
+    {{ .Content }}
+  </div>
+  {{ with .GetTerms "tags" }}
+  <div class="post-meta" style="margin-top:1.5rem">
+    <ul>
+      {{ range . }}<li><a class="tag-link" href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}
+    </ul>
+  </div>
+  {{ end }}
+  <div class="back-home-row back-home-row--bottom">{{ partial "back-home.html" . }}</div>
+</article>
+{{ end }}

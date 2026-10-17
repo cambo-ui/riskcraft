@@ -1,0 +1,87 @@
+# The RiskCraft learning path: zero -> hero.
+#
+# This file drives /learning-path. Each level lists the posts that belong to it.
+# A post joins a level by setting `level: <id>` in its front matter. Any post
+# with that level is pulled in automatically under "Published"; `planned`
+# entries below are the roadmap of posts still to be written.
+#
+# Edit freely — no code changes needed.
+
+levels:
+  - id: 0
+    name: "Ground Zero"
+    subtitle: "The language of risk"
+    tagline: "Speak the same language as the risk team before you try to lead it."
+    outcomes:
+      - "Define risk, threat, vulnerability, likelihood and impact in plain English."
+      - "Explain why IT risk is a business conversation, not a checklist."
+      - "Read a risk register and understand what each column means."
+    planned:
+      - title: "Risk vs. Threat vs. Vulnerability vs. Impact"
+      - title: "Inherent vs. Residual Risk, Explained Simply"
+      - title: "The CIA Triad and Why It Anchors Everything"
+
+  - id: 1
+    name: "Foundations"
+    subtitle: "How risk management actually works"
+    tagline: "The core loop: identify, assess, treat, monitor, report."
+    outcomes:
+      - "Describe the risk management lifecycle end to end."
+      - "Build a risk register people actually use."
+      - "Set an appetite and tolerance statement that means something."
+    planned:
+      - title: "The Risk Management Lifecycle, Step by Step"
+      - title: "Risk Appetite vs. Risk Tolerance vs. Risk Capacity"
+      - title: "How to Write a Risk Statement That Isn't Vague"
+
+  - id: 2
+    name: "Practitioner"
+    subtitle: "Assess, analyse, treat"
+    tagline: "Turn a messy list of worries into ranked, defensible decisions."
+    outcomes:
+      - "Run a qualitative risk assessment with a scoring matrix."
+      - "Know when and how to go quantitative (FAIR, Monte Carlo)."
+      - "Choose between avoid, mitigate, transfer and accept."
+    planned:
+      - title: "Designing a Risk Scoring Matrix That Isn't Arbitrary"
+      - title: "FAIR in 15 Minutes: Quantitative Risk for Busy People"
+      - title: "Control Types: Preventive, Detective, Corrective, Deterrent"
+
+  - id: 3
+    name: "Specialist"
+    subtitle: "Frameworks, standards and compliance"
+    tagline: "Map the alphabet soup to your reality instead of the other way round."
+    outcomes:
+      - "Compare ISO 31000, ISO 27005, NIST RMF, COBIT, COSO and FAIR."
+      - "Align controls to a framework without drowning in paperwork."
+      - "Prepare for an audit without a last-minute fire drill."
+    planned:
+      - title: "ISO 27005 in Practice: A Worked Example"
+      - title: "NIST RMF vs. ISO 27005: Which One and When"
+      - title: "Audit Readiness: Evidence You Can Reuse"
+
+  - id: 4
+    name: "Enterprise"
+    subtitle: "Governance and GRC at scale"
+    tagline: "Risk is a system. Make the system run without you in the room."
+    outcomes:
+      - "Apply the Three Lines Model to an IT risk function."
+      - "Report risk to a board or steering committee in one page."
+      - "Integrate risk into change, project and vendor processes."
+    planned:
+      - title: "Risk Appetite Statements the Board Will Actually Approve"
+      - title: "Third-Party and Supply-Chain Risk: A Practical Playbook"
+      - title: "Cloud Shared Responsibility and What It Means for Your Risk"
+
+  - id: 5
+    name: "Hero"
+    subtitle: "Leadership, culture and strategy"
+    tagline: "Move from running the process to shaping how people think about risk."
+    outcomes:
+      - "Diagnose and improve risk culture."
+      - "Build a metrics programme with KRIs leaders trust."
+      - "Make the career leap from analyst to risk leader."
+    planned:
+      - title: "Designing KRIs That Predict, Not Just Report"
+      - title: "Five Conversations That Shift Risk Culture"
+      - title: "CRISC, CISM or CISSP? A Risk Career Roadmap"

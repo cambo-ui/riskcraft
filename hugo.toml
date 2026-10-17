@@ -1,0 +1,58 @@
+baseURL = 'https://riskcraft.vercel.app/'
+locale = 'en-us'
+title = 'RiskCraft'
+enableRobotsTXT = true
+enableGitInfo = false
+
+# How many posts per page on list/home pages
+[pagination]
+  pagerSize = 10
+
+[params]
+  description = 'From risk fundamentals to enterprise GRC.'
+  tagline = 'From risk fundamentals to enterprise GRC.'
+  author = 'RiskCraft'
+  # Update these once you have a domain / email
+  email = ''
+  github = ''
+
+# Two axes for organising the blog:
+#   categories -> the topic domain (what it is about)
+#   tags       -> free-form keywords
+# The learning path (zero -> hero) is driven by the `level` front-matter field.
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = 'github-dark'
+    noClasses = false
+
+[outputs]
+  home = ['HTML', 'RSS']
+
+[menus]
+  [[menus.main]]
+    name = 'start here'
+    pageRef = '/start-here'
+    weight = 10
+  [[menus.main]]
+    name = 'learning path'
+    pageRef = '/learning-path'
+    weight = 20
+  [[menus.main]]
+    name = 'topics'
+    pageRef = '/categories'
+    weight = 30
+  [[menus.main]]
+    name = 'resources'
+    pageRef = '/resources'
+    weight = 40
+  [[menus.main]]
+    name = 'about'
+    pageRef = '/about'
+    weight = 50

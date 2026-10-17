@@ -1,0 +1,25 @@
+# The ten topic domains. Drives the "Browse by topic" grid and /categories/.
+# Colour/label order here is the display order. `name` MUST match the
+# `categories:` value used in post front matter exactly.
+
+topics:
+  - name: "Foundations"
+    description: "Risk vocabulary, principles, and the core ideas everything else builds on."
+  - name: "Risk Assessment"
+    description: "Identifying, analysing, scoring, and prioritising risk — qualitative and quantitative."
+  - name: "Frameworks & Standards"
+    description: "ISO 27005, ISO 31000, NIST RMF/CSF, COBIT, COSO and FAIR, decoded and compared."
+  - name: "Treatment & Controls"
+    description: "Avoid, mitigate, transfer, accept — and the control types that make it real."
+  - name: "Governance & Oversight"
+    description: "Ownership, appetite, Three Lines, board reporting, and operating models."
+  - name: "Third-Party Risk"
+    description: "Vendors, suppliers, and the supply chain you inherit risk from."
+  - name: "Cloud & Cyber Risk"
+    description: "Shared responsibility, cloud migration, and modern cyber threats."
+  - name: "Compliance & Audit"
+    description: "Regulations, evidence, audit readiness, and staying out of fire drills."
+  - name: "Metrics & Reporting"
+    description: "KRIs, KPIs, dashboards, and telling the truth with numbers."
+  - name: "Culture & Career"
+    description: "Risk culture, leadership, soft skills, and certifications like CRISC and CISM."

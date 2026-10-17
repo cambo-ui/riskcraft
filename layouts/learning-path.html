@@ -1,0 +1,33 @@
+{{ define "title" }}Learning path — {{ site.Title }}{{ end }}
+{{ define "main" }}
+{{ .Content }}
+
+{{ $posts := where site.RegularPages "Section" "posts" }}
+<ul class="path">
+  {{ range hugo.Data.learning_path.levels }}
+  {{ $id := .id }}
+  {{ $levelPosts := where $posts "Params.level" $id }}
+  <li class="path-level" data-level="{{ $id }}">
+    <div class="path-num">{{ $id }}</div>
+    <div class="path-body">
+      <h2 id="level-{{ $id }}">Level {{ $id }} · {{ .name }}</h2>
+      <p class="path-sub">{{ .subtitle }}</p>
+      <p class="path-tagline">{{ .tagline }}</p>
+      {{ with .outcomes }}
+      <ul class="path-outcomes">
+        {{ range . }}<li>{{ . }}</li>{{ end }}
+      </ul>
+      {{ end }}
+      <ul class="path-postlist">
+        {{ range $levelPosts.ByWeight }}
+        <li class="done"><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{ end }}
+        {{ range .planned }}
+        <li class="planned">{{ .title }} <span class="path-badge">planned</span></li>
+        {{ end }}
+      </ul>
+    </div>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}

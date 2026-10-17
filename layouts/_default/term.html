@@ -1,0 +1,11 @@
+{{ define "main" }}
+<div class="breadcrumbs"><a href="{{ "/categories/" | relURL }}">Topics</a> / {{ .Title }}</div>
+<h1>{{ .Title }}</h1>
+{{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+<p class="policy" style="color:var(--muted)">{{ .Pages | len }} post{{ if ne (.Pages | len) 1 }}s{{ end }} in this topic.</p>
+<div class="card-grid">
+  {{ range .Pages }}
+  {{ partial "post-card.html" . }}
+  {{ end }}
+</div>
+{{ end }}

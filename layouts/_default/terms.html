@@ -1,0 +1,13 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+<div class="cat-grid">
+  {{ range .Pages }}
+  <a class="cat-card" href="{{ .RelPermalink }}">
+    <h3>{{ .Title }}</h3>
+    {{ with .Params.description }}<p>{{ . }}</p>{{ end }}
+    <span class="cat-count">{{ .Pages | len }} post{{ if ne (.Pages | len) 1 }}s{{ end }}</span>
+  </a>
+  {{ end }}
+</div>
+{{ end }}

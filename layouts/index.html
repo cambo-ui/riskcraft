@@ -1,0 +1,83 @@
+{{ define "main" }}
+<section class="hero">
+  <h1>{{ site.Title }}</h1>
+  <p class="hero-tagline">{{ site.Params.tagline }}</p>
+  <div class="hero-actions">
+    <a class="btn btn-primary" href="{{ "/start-here/" | relURL }}">Start here →</a>
+    <a class="btn btn-ghost" href="{{ "/learning-path/" | relURL }}">See the learning path</a>
+  </div>
+</section>
+
+{{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+
+<section>
+  <div class="section-head">
+    <h2>The path: zero → hero</h2>
+    <a href="{{ "/learning-path/" | relURL }}">Full roadmap →</a>
+  </div>
+  <p>Six levels take you from the vocabulary of risk to leading an enterprise risk programme. Every post is tagged with the level it belongs to.</p>
+  <ul class="path">
+    {{ range hugo.Data.learning_path.levels }}
+    <li class="path-level" data-level="{{ .id }}">
+      <div class="path-num">{{ .id }}</div>
+      <div class="path-body">
+        <h2>Level {{ .id }} · {{ .name }}</h2>
+        <p class="path-sub">{{ .subtitle }}</p>
+        <p class="path-tagline">{{ .tagline }}</p>
+      </div>
+    </li>
+    {{ end }}
+  </ul>
+</section>
+
+<section>
+  <div class="section-head">
+    <h2>Browse by topic</h2>
+    <a href="{{ "/categories/" | relURL }}">All topics →</a>
+  </div>
+  {{ $catPages := dict }}
+  {{ $catCounts := dict }}
+  {{ range site.Pages }}
+    {{ if and (eq .Kind "term") (eq .Type "categories") }}
+      {{ $catPages = merge $catPages (dict .Title .) }}
+    {{ end }}
+  {{ end }}
+  {{ range site.Taxonomies.categories }}
+    {{ $catCounts = merge $catCounts (dict .Page.Title .Count) }}
+  {{ end }}
+  <div class="cat-grid">
+    {{ range hugo.Data.topics.topics }}
+    {{ $page := index $catPages .name }}
+    {{ $count := index $catCounts .name | default 0 }}
+    {{ if $page }}
+    <a class="cat-card" href="{{ $page.RelPermalink }}">
+      <h3>{{ .name }}</h3>
+      <p>{{ .description }}</p>
+      <span class="cat-count">{{ $count }} post{{ if ne $count 1 }}s{{ end }}</span>
+    </a>
+    {{ else }}
+    <div class="cat-card" style="opacity:.6">
+      <h3>{{ .name }}</h3>
+      <p>{{ .description }}</p>
+      <span class="cat-count">Coming soon</span>
+    </div>
+    {{ end }}
+    {{ end }}
+  </div>
+</section>
+
+<section>
+  <div class="section-head">
+    <h2>Latest posts</h2>
+    <a href="{{ "/archive/" | relURL }}">Archive →</a>
+  </div>
+  {{ $posts := where site.RegularPages "Section" "posts" }}
+  {{ $paginator := .Paginate $posts }}
+  <div class="card-grid">
+    {{ range $paginator.Pages }}
+      {{ partial "post-card.html" . }}
+    {{ end }}
+  </div>
+  {{ partial "pagination.html" . }}
+</section>
+{{ end }}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.Locale | default "en" }}">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ block "title" . }}{{ site.Title }}{{ if not .IsHome }} — {{ site.Params.tagline }}{{ end }}{{ end }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
+  <meta property="og:title" content="{{ with .Params.title }}{{ . }}{{ else }}{{ site.Title }}{{ end }}">
+  <meta property="og:description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
+  <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | relURL }}">
+  {{ with site.Home.OutputFormats.Get "RSS" }}<link rel="alternate" type="application/rss+xml" title="{{ site.Title }} (RSS)" href="{{ .Permalink }}">{{ end }}
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+  <script>
+    const s = localStorage.getItem('theme');
+    if (s === 'light' || s === 'dark') document.documentElement.setAttribute('data-theme', s);
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header>
+    <nav class="site-nav" aria-label="Main">
+      <a class="site-title" href="{{ "/" | relURL }}">{{ site.Title }}</a>
+      <ul class="site-nav-links">
+        {{ range site.Menus.main }}
+        <li><a href="{{ .URL }}"{{ if $.IsMenuCurrent "main" . }} class="active"{{ end }}>{{ .Name }}</a></li>
+        {{ end }}
+        <li><a href="{{ "/archive/" | relURL }}">archive</a></li>
+        <li><button id="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="site-content layout-container">
+    <main id="main-content">
+      {{ block "main" . }}{{ end }}
+    </main>
+  </div>
+  <footer class="site-footer">
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h3>{{ site.Title }}</h3>
+        <p>{{ site.Params.tagline }}</p>
+      </div>
+      <div class="footer-col">
+        <h3>The path</h3>
+        <ul>
+          <li><a href="{{ "/start-here/" | relURL }}">Start here</a></li>
+          <li><a href="{{ "/learning-path/" | relURL }}">Learning path</a></li>
+          <li><a href="{{ "/categories/" | relURL }}">Browse topics</a></li>
+          <li><a href="{{ "/resources/" | relURL }}">Resources</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Recent posts</h3>
+        <ul>
+          {{ range first 5 (where site.RegularPages "Section" "posts") }}
+          <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+    <p class="footer-copy">&copy; {{ now.Year }} {{ site.Params.author }} · <a href="{{ "/index.xml" | relURL }}">RSS</a></p>
+  </footer>
+  <script>
+    document.getElementById('theme-toggle').addEventListener('click', () => {
+      const cur = document.documentElement.getAttribute('data-theme') ??
+        (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+      const next = cur === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    });
+  </script>
+</body>
+</html>

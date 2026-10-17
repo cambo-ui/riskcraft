@@ -1,0 +1,91 @@
+# Pages CMS configuration — https://pagescms.org
+#
+# A browser-based editor for this Hugo blog. Sign in at
+# https://app.pagescms.org, pick the repository, and you can write/edit posts,
+# choose a category and level, and upload images from any browser. Every save
+# commits to GitHub, which triggers a Vercel rebuild (live in ~30s).
+
+media:
+  - name: images
+    label: Images
+    input: static/images
+    output: /images
+    categories: [image]
+    rename: true
+
+content:
+  - name: posts
+    label: Blog posts
+    type: collection
+    path: content/posts
+    format: yaml-frontmatter
+    delimiters: "---"
+    filename: "{title}.md"
+    view:
+      fields: [title, draft, level, date]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: date
+        label: Date
+        type: date
+        options:
+          format: "yyyy-MM-dd"
+      - name: draft
+        label: Draft (save without publishing)
+        type: boolean
+        default: false
+        description: On = saved to the repo but hidden from the live site.
+      - name: description
+        label: Description
+        type: string
+        description: Short summary shown in previews and used for SEO.
+      - name: level
+        label: Learning path level
+        type: select
+        options:
+          values:
+            - { label: "0 · Ground Zero", value: 0 }
+            - { label: "1 · Foundations", value: 1 }
+            - { label: "2 · Practitioner", value: 2 }
+            - { label: "3 · Specialist", value: 3 }
+            - { label: "4 · Enterprise", value: 4 }
+            - { label: "5 · Hero", value: 5 }
+      - name: categories
+        label: Topics
+        type: select
+        list: true
+        options:
+          values:
+            - Foundations
+            - Risk Assessment
+            - Frameworks & Standards
+            - Treatment & Controls
+            - Governance & Oversight
+            - Third-Party Risk
+            - Cloud & Cyber Risk
+            - Compliance & Audit
+            - Metrics & Reporting
+            - Culture & Career
+      - name: tags
+        label: Tags
+        type: string
+        list: true
+        description: Press Enter after each tag.
+      - name: weight
+        label: Order within level
+        type: number
+      - name: body
+        label: Body
+        type: rich-text
+        options:
+          format: markdown
+          media: images
+          switcher: true

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Page not found — {{ site.Title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | relURL }}">
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+</head>
+<body>
+  <div class="site-content layout-container">
+    <section class="hero">
+      <h1>404</h1>
+      <p class="hero-tagline">That page slipped past the risk register.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="{{ "/" | relURL }}">Back home</a>
+        <a class="btn btn-ghost" href="{{ "/learning-path/" | relURL }}">Learning path</a>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

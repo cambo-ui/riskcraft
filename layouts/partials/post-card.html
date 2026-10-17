@@ -1,0 +1,10 @@
+{{ $p := . }}
+<a class="card" href="{{ $p.RelPermalink }}">
+  <h3>{{ $p.Title }}</h3>
+  {{ with $p.Params.description }}<p>{{ . }}</p>{{ end }}
+  <div class="card-meta">
+    {{ partial "level-badge.html" $p }}
+    <time datetime="{{ $p.Date.Format "2006-01-02" }}">{{ $p.Date.Format "Jan 2, 2006" }}</time>
+    {{ with $p.GetTerms "categories" }}<span>· {{ range $i, $t := . }}{{ if $i }}, {{ end }}{{ $t.Title }}{{ end }}</span>{{ end }}
+  </div>
+</a>

@@ -1,0 +1,18 @@
+{{ $posts := where site.RegularPages "Section" "posts" }}
+<ul class="path">
+  {{ range hugo.Data.learning_path.levels }}
+  {{ $id := .id }}
+  {{ $levelPosts := where $posts "Params.level" $id }}
+  <li class="path-level" data-level="{{ $id }}">
+    <div class="path-num">{{ $id }}</div>
+    <div class="path-body">
+      <h2><a href="{{ "/learning-path/" | relURL }}#level-{{ $id }}">Level {{ $id }} · {{ .name }}</a></h2>
+      <p class="path-sub">{{ .subtitle }} — {{ .tagline }}</p>
+      <ul class="path-postlist">
+        {{ range $levelPosts.ByWeight }}<li class="done"><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}
+        {{ if not $levelPosts }}<li class="planned">posts coming soon</li>{{ end }}
+      </ul>
+    </div>
+  </li>
+  {{ end }}
+</ul>

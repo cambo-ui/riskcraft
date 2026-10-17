@@ -1,0 +1,17 @@
+{{ define "title" }}Archive — {{ site.Title }}{{ end }}
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ with .Content }}{{ . }}{{ end }}
+{{ $posts := where site.RegularPages "Section" "posts" }}
+{{ range $posts.GroupByDate "2006" }}
+<h2>{{ .Key }}</h2>
+<ul>
+  {{ range .Pages }}
+  <li>
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    <span style="color:var(--muted);font-size:.85rem"> — {{ .Date.Format "Jan 2" }}</span>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}
+{{ end }}

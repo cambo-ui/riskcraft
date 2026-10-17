@@ -1,0 +1,36 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+
+{{/* Look up topic term pages by title (works even for topics with no posts yet). */}}
+{{ $pages := dict }}
+{{ $counts := dict }}
+{{ range site.Pages }}
+  {{ if and (eq .Kind "term") (eq .Type "categories") }}
+    {{ $pages = merge $pages (dict .Title .) }}
+  {{ end }}
+{{ end }}
+{{ range site.Taxonomies.categories }}
+  {{ $counts = merge $counts (dict .Page.Title .Count) }}
+{{ end }}
+
+<div class="cat-grid">
+  {{ range hugo.Data.topics.topics }}
+    {{ $page := index $pages .name }}
+    {{ $count := index $counts .name | default 0 }}
+    {{ if $page }}
+    <a class="cat-card" href="{{ $page.RelPermalink }}">
+      <h3>{{ .name }}</h3>
+      <p>{{ .description }}</p>
+      <span class="cat-count">{{ $count }} post{{ if ne $count 1 }}s{{ end }}</span>
+    </a>
+    {{ else }}
+    <div class="cat-card" style="opacity:.6">
+      <h3>{{ .name }}</h3>
+      <p>{{ .description }}</p>
+      <span class="cat-count">Coming soon</span>
+    </div>
+    {{ end }}
+  {{ end }}
+</div>
+{{ end }}

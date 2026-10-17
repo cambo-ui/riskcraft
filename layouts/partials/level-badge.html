@@ -1,0 +1,6 @@
+{{ $level := .Params.level }}
+{{ $names := dict "0" "Ground Zero" "1" "Foundations" "2" "Practitioner" "3" "Specialist" "4" "Enterprise" "5" "Hero" }}
+{{ with $level }}
+{{ $key := printf "%v" . }}
+<span class="level-badge" data-level="{{ $key }}">Level {{ $key }}{{ with index $names $key }} · {{ . }}{{ end }}</span>
+{{ end }}
